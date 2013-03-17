@@ -1,0 +1,36 @@
+{
+  "name": "progressify",
+  "version": "0.0.0",
+  "description": "browserify transformer that shows bundling progress.",
+  "main": "progressify.js",
+  "scripts": {
+    "test": "node-trap test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thlorenz/progressify.git"
+  },
+  "homepage": "https://github.com/thlorenz/progressify",
+  "dependencies": {
+    "through": "~2.2.7"
+  },
+  "devDependencies": {
+    "browserify": "~2.7.1",
+    "trap": "~0.4.2"
+  },
+  "keywords": [
+    "browserify",
+    "transform",
+    "progress",
+    "v2"
+  ],
+  "author": {
+    "name": "Thorsten Lorenz",
+    "email": "thlorenz@gmx.de",
+    "url": "http://thlorenz.com"
+  },
+  "license": "MIT",
+  "engine": {
+    "node": ">=0.6"
+  }
+}
