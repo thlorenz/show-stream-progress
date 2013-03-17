@@ -1,16 +1,16 @@
 {
-  "name": "progressify",
+  "name": "show-stream-progress",
   "version": "0.0.0",
-  "description": "browserify transformer that shows bundling progress.",
-  "main": "progressify.js",
+  "description": "Shows progress of any async operation that streams results.", 
+  "main": "show-stream-progress.js",
   "scripts": {
     "test": "node-trap test/*.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/thlorenz/progressify.git"
+    "url": "git://github.com/thlorenz/show-stream-progress.git"
   },
-  "homepage": "https://github.com/thlorenz/progressify",
+  "homepage": "https://github.com/thlorenz/show-stream-progress",
   "dependencies": {
     "through": "~2.2.7"
   },

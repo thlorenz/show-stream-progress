@@ -1,6 +1,6 @@
 'use strict';
 
-var progressify =  require('..')
+var showProgress =  require('..')
   , browserify  =  require('browserify')
   , path        =  require('path')
   , fs          =  require('fs')
@@ -9,9 +9,9 @@ var progressify =  require('..')
   ;
 
 browserify()
-  .require(__filename, { entry: true })
-  .transform(progressify)
+  .require(require.resolve(__filename), { entry: true })
   .bundle({ debug: true })
+  .pipe(showProgress(process.stderr))
   .pipe(fs.createWriteStream(bundle))
   ;
 

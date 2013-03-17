@@ -1,3 +1,18 @@
-# progressify [![build status](https://secure.travis-ci.org/thlorenz/progressify.png)](http://travis-ci.org/thlorenz/progressify)
+# show-stream-progress [![build status](https://secure.travis-ci.org/thlorenz/show-stream-progress.png)](http://travis-ci.org/thlorenz/show-stream-progress)
 
-browserify transformer that shows bundling progress.
+Shows progress of any async operation that streams results.
+
+```js
+var showProgress =  require('show-stream-progress')
+  , browserify   =  require('browserify')
+
+browserify()
+  .require(require.resolve('./entry.js'), { entry: true })
+  .bundle({ debug: true })
+  .pipe(showProgress(process.stderr))
+  .pipe(fs.createWriteStream('./bundle.js'))
+  ;
+```
+
+Although this example shows how to use this while building a bundle with browserify, show-stream-progress works with any
+stream.

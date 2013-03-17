@@ -1,14 +1,17 @@
 'use strict';
 var through = require('through');
 
-module.exports = function (file) {
+module.exports = function (out) {
   var data = '';
+  out = out || process.stdout;
 
   return through(write, end);
 
-  function write (buf) { data += buf; }
+  function write (buf) { 
+    data += buf; 
+    process.stdout.write('.');
+  }
   function end () {
-    process.stderr.write(file + ' : ' );
     this.queue(data);
     this.queue(null);
   }
