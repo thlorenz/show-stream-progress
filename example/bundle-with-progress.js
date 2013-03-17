@@ -9,8 +9,8 @@ var progressify =  require('..')
   ;
 
 browserify()
-  .transform(progressify)
   .require(__filename, { entry: true })
+  .transform(progressify)
   .bundle({ debug: true })
   .pipe(fs.createWriteStream(bundle))
   ;
