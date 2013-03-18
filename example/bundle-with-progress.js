@@ -8,6 +8,7 @@ var showProgress =  require('..')
   , bundle      =  path.join(__dirname, 'bundle.js')
   ;
 
+console.log('\n========\nDEMO: we will print pretty dots to show bundling progress:\n========\n');
 browserify()
   .require(require.resolve(__filename), { entry: true })
   .bundle({ debug: true })

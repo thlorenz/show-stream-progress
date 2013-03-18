@@ -4,7 +4,8 @@
   "description": "Shows progress of any async operation that streams results.",
   "main": "show-stream-progress.js",
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "tap test/*.js",
+    "demo": "npm install browserify && node ./example/bundle-with-progress"
   },
   "repository": {
     "type": "git",
@@ -15,7 +16,6 @@
     "through": "~2.2.7"
   },
   "devDependencies": {
-    "browserify": "~2.7.1",
     "tap": "~0.4.0",
     "from": "~0.1.3"
   },
