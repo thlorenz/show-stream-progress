@@ -17,6 +17,15 @@ browserify()
 Although this example shows how to use this while building a bundle with browserify, show-stream-progress works with any
 stream.
 
+## Installation
+
+    npm i show-stream-progress
+
+## Demo
+
+    npm explore show-stream-progress
+    npm run demo
+
 ## API
 
 ```
