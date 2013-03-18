@@ -8,17 +8,11 @@ var through = require('through');
  * @return {Stream} Readable and writable stream that just passes along data written to it.
  */
 module.exports = function showProgress(out) {
-  var data = '';
   out = out || process.stdout;
-
-  return through(write, end);
+  return through(write);
 
   function write (buf) { 
-    data += buf; 
-    process.stdout.write('.');
-  }
-  function end () {
-    this.queue(data);
-    this.queue(null);
+    out.write('.');
+    this.queue(buf);
   }
 };
