@@ -14,8 +14,14 @@ browserify()
   ;
 ```
 
+```
+................................................................................
+```
+
 Although this example shows how to use this while building a bundle with browserify, show-stream-progress works with any
 stream.
+
+**Note:** Actual output subject to change depending on browserify version. I make no guarantees ;)
 
 ## Installation
 
